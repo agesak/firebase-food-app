@@ -22,16 +22,20 @@ struct UserView_Previews: PreviewProvider {
 
 struct Home : View {
     
-    @ObservedObject var categories = getCategoriesData()
+    @ObservedObject var users = getUsersData()
+    @State var username : String = ""
     
     var body : some View{
   
-//        Text(categories.datas)
         VStack{
             
-            List(categories.datas){i in
+            Text("Sign Up")
+                .font(.largeTitle)
+            TextField("Username", text: $username)
+            
+            List(users.data){i in
 
-                Text(i.name)
+                Text(i.username)
 
 
             }
@@ -39,31 +43,34 @@ struct Home : View {
     }
 }
 
-class getCategoriesData : ObservableObject {
-    @Published var datas = [category]()
+//displaying the data
+class getUsersData : ObservableObject {
+    @Published var data = [user]()
     
     init() {
         let db = Firestore.firestore()
         
-        db.collection("categories").addSnapshotListener { (snap, err) in
+        db.collection("users").addSnapshotListener { (snap, err) in
             if err != nil {
                 print((err?.localizedDescription)!)
                 return
             }
             for i in snap!.documentChanges{
                 let id = i.document.documentID
-                let name = i.document.get("name") as! String
-                let price = i.document.get("price") as! String
+                let username = i.document.get("username") as! String
+                let password = i.document.get("password") as! String
+                let email = i.document.get("email") as! String
                 
-                self.datas.append(category(id: id, name: name, price: price))
+                self.data.append(user(id: id, username: username, email: email, password: password))
             }
         }
     }
 }
 
-struct category : Identifiable {
+struct user : Identifiable {
     
     var id : String
-    var name : String
-    var price : String
+    var username : String
+    var email : String
+    var password : String
 }

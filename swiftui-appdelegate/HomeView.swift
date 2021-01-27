@@ -76,7 +76,7 @@ struct MainView: View {
                 AppLogo()
                 Spacer()
                 
-                
+//                cant figure out how to make function work
 //                CreateAccount()
                 Button(action: {
                     withAnimation {
@@ -103,23 +103,23 @@ struct MainView: View {
 
 //struct CreateAccount: View {
 //
-//
+//    var signUp: Bool
 //
 //    var body: some View {
-////        Button(action: {
-////            withAnimation {
-////                self.signUp.toggle()}
-////        }) {
-////            Text("Sign Up")
-////                .font(.title)
-////                .fontWeight(.bold)
-////                .foregroundColor(.white)
-////                .padding()
-////              .frame(width: 250, height: 50)
-//////                for custom divide rbg by 255
-////                .background(Color.purple)
-////              .cornerRadius(10.0)
-////        }
+//        Button(action: {
+//            withAnimation {
+//                signUp.toggle()}
+//        }) {
+//            Text("Sign Up")
+//                .font(.title)
+//                .fontWeight(.bold)
+//                .foregroundColor(.white)
+//                .padding()
+//              .frame(width: 250, height: 50)
+////                for custom divide rbg by 255
+//                .background(Color.purple)
+//              .cornerRadius(10.0)
+//        }
 //    }
 //}
 
