@@ -8,6 +8,12 @@
 import SwiftUI
 import Firebase
 
+
+
+
+
+
+
 struct HomeView: View {
     @State var showMenu = false
     @State var signUp = false
@@ -15,6 +21,7 @@ struct HomeView: View {
     var body: some View {
         
         return NavigationView {
+            
             
             GeometryReader { geometry in
                 ZStack(alignment: .leading) {
@@ -29,6 +36,7 @@ struct HomeView: View {
                     }
                     if self.signUp {
                         UserView()
+                        .frame(width: geometry.size.width, height: geometry.size.height)
                     }
                 }
             }

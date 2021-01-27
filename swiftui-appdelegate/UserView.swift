@@ -33,12 +33,12 @@ struct Home : View {
                 .font(.largeTitle)
             TextField("Username", text: $username)
             
-            List(users.data){i in
-
-                Text(i.username)
-
-
-            }
+//            List(users.data){i in
+//
+//                Text(i.username)
+//
+//
+//            }
         }
     }
 }
