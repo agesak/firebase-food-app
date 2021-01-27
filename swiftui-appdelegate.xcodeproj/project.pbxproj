@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		3C32BE0025C12A2700BAC346 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C32BDFF25C12A2700BAC346 /* Preview Assets.xcassets */; };
 		3C32BE0325C12A2700BAC346 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C32BE0125C12A2700BAC346 /* LaunchScreen.storyboard */; };
 		3C32BE0C25C12AD200BAC346 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C32BE0B25C12AD200BAC346 /* GoogleService-Info.plist */; };
+		3C53211625C1439B00AC078C /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C53211525C1439B00AC078C /* MenuView.swift */; };
 		7E3CD5A291A4EEF29E15DB36 /* Pods_swiftui_appdelegate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A236815A59D811049FB5213 /* Pods_swiftui_appdelegate.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		3C32BE0225C12A2700BAC346 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3C32BE0425C12A2700BAC346 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3C32BE0B25C12AD200BAC346 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3C53211525C1439B00AC078C /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		7A236815A59D811049FB5213 /* Pods_swiftui_appdelegate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_swiftui_appdelegate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7A75C3CF70FBD75BB10F3CC /* Pods-swiftui-appdelegate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftui-appdelegate.release.xcconfig"; path = "Target Support Files/Pods-swiftui-appdelegate/Pods-swiftui-appdelegate.release.xcconfig"; sourceTree = "<group>"; };
 		FEEEAECF313DB57764CD77CF /* Pods-swiftui-appdelegate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-swiftui-appdelegate.debug.xcconfig"; path = "Target Support Files/Pods-swiftui-appdelegate/Pods-swiftui-appdelegate.debug.xcconfig"; sourceTree = "<group>"; };
@@ -50,7 +52,6 @@
 				FEEEAECF313DB57764CD77CF /* Pods-swiftui-appdelegate.debug.xcconfig */,
 				E7A75C3CF70FBD75BB10F3CC /* Pods-swiftui-appdelegate.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -78,6 +79,7 @@
 				3C32BDF625C12A2100BAC346 /* AppDelegate.swift */,
 				3C32BDF825C12A2100BAC346 /* SceneDelegate.swift */,
 				3C32BDFA25C12A2100BAC346 /* ContentView.swift */,
+				3C53211525C1439B00AC078C /* MenuView.swift */,
 				3C32BDFC25C12A2700BAC346 /* Assets.xcassets */,
 				3C32BE0125C12A2700BAC346 /* LaunchScreen.storyboard */,
 				3C32BE0425C12A2700BAC346 /* Info.plist */,
@@ -237,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C32BDF725C12A2100BAC346 /* AppDelegate.swift in Sources */,
+				3C53211625C1439B00AC078C /* MenuView.swift in Sources */,
 				3C32BDF925C12A2100BAC346 /* SceneDelegate.swift in Sources */,
 				3C32BDFB25C12A2100BAC346 /* ContentView.swift in Sources */,
 			);
