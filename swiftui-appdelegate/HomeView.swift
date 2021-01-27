@@ -10,6 +10,7 @@ import Firebase
 
 struct HomeView: View {
     @State var showMenu = false
+    @State var signUp = false
     
     var body: some View {
         
@@ -17,7 +18,7 @@ struct HomeView: View {
             
             GeometryReader { geometry in
                 ZStack(alignment: .leading) {
-                    MainView(showMenu: self.$showMenu)
+                    MainView(showMenu: self.$showMenu, signUp: self.$signUp)
                         .frame(width: geometry.size.width, height: geometry.size.height)
                         .offset(x: self.showMenu ? geometry.size.width/2 : 0)
                         .disabled(self.showMenu ? true : false)
@@ -25,6 +26,9 @@ struct HomeView: View {
                         MenuView()
                             .frame(width: geometry.size.width/2)
                             .transition(.move(edge: .leading))
+                    }
+                    if self.signUp {
+                        UserView()
                     }
                 }
             }
@@ -52,6 +56,7 @@ struct ContentView_Previews: PreviewProvider {
 struct MainView: View {
     
     @Binding var showMenu: Bool
+    @Binding var signUp: Bool
     @Environment(\.colorScheme) var colorScheme: ColorScheme
     
     var body: some View {
@@ -70,7 +75,23 @@ struct MainView: View {
                 Spacer()
                 AppLogo()
                 Spacer()
-                CreateAccount()
+                
+                
+//                CreateAccount()
+                Button(action: {
+                    withAnimation {
+                        self.signUp.toggle()}
+                }) {
+                    Text("Sign Up")
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .foregroundColor(.white)
+                        .padding()
+                      .frame(width: 250, height: 50)
+        //                for custom divide rbg by 255
+                        .background(Color.purple)
+                      .cornerRadius(10.0)
+                }
                 Spacer().frame(height: 30)
                 SignIn()
                 Spacer()
@@ -80,23 +101,27 @@ struct MainView: View {
 }
 
 
-struct CreateAccount: View {
-    var body: some View {
-        Button(action: {
-            print("Button action")
-        }) {
-            Text("Sign Up")
-                .font(.title)
-                .fontWeight(.bold)
-                .foregroundColor(.white)
-                .padding()
-              .frame(width: 250, height: 50)
-//                for custom divide rbg by 255
-                .background(Color.purple)
-              .cornerRadius(10.0)
-        }
-    }
-}
+//struct CreateAccount: View {
+//
+//
+//
+//    var body: some View {
+////        Button(action: {
+////            withAnimation {
+////                self.signUp.toggle()}
+////        }) {
+////            Text("Sign Up")
+////                .font(.title)
+////                .fontWeight(.bold)
+////                .foregroundColor(.white)
+////                .padding()
+////              .frame(width: 250, height: 50)
+//////                for custom divide rbg by 255
+////                .background(Color.purple)
+////              .cornerRadius(10.0)
+////        }
+//    }
+//}
 
 struct SignIn: View {
     var body: some View {
