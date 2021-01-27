@@ -1,0 +1,6 @@
+framework module Pods_swiftui_appdelegate {
+  umbrella header "Pods-swiftui-appdelegate-umbrella.h"
+
+  export *
+  module * { export * }
+}
